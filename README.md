@@ -1,40 +1,99 @@
-<<<<<<< HEAD
-# CryptoWeather-Nexus
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CryptoWeather Nexus
 
-## Getting Started
+CryptoWeather Nexus is a multi-page dashboard that integrates **weather data**, **cryptocurrency information**, and **real-time notifications** to provide users with an interactive experience. Built using **Next.js, React, Redux, WebSockets, and Tailwind CSS**, this project offers real-time insights and data visualization.
 
-First, run the development server:
+## 🚀 Features
+- **Real-time Weather Updates**: Fetch current weather details for cities.
+- **Cryptocurrency Tracking**: Monitor real-time crypto prices and market trends.
+- **Historical Data Visualization**: View weather and crypto trends over time.
+- **Custom Alerts & Notifications**: Get alerts based on market or weather changes.
+- **Responsive UI**: Fully optimized for mobile and desktop views.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠️ Tech Stack
+- **Frontend**: Next.js (App Router), React, Redux
+- **State Management**: Redux Toolkit
+- **Styling**: Tailwind CSS
+- **Data Fetching**: REST APIs (Weather API, Crypto API)
+- **Real-time Updates**: WebSockets
+- **Deployment**: Vercel
+
+## 📂 Project Structure
+```
+crypto-weather-nexus/
+│── public/           # Static assets
+│── src/
+│   ├── app/         # Next.js App Router pages
+│   │   ├── dashboard/
+│   │   ├── city/[name]/
+│   │   ├── crypto/[id]/
+│   ├── components/  # Reusable UI components
+│   ├── features/    # Redux slices for state management
+│   ├── utils/       # Helper functions
+│── .env.local       # Environment variables
+│── package.json     # Dependencies and scripts
+│── tailwind.config.js # Tailwind CSS config
+│── next.config.js   # Next.js configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Setup Instructions
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/anjali06102004/CryptoWeather-Nexus.git
+cd CryptoWeather-Nexus
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### **2️⃣ Install Dependencies**
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **3️⃣ Set Up Environment Variables**
+Create a `.env.local` file in the root directory and add your API keys:
+```env
+NEXT_PUBLIC_WEATHER_API_KEY=your_weather_api_key
+NEXT_PUBLIC_CRYPTO_API_KEY=your_crypto_api_key
+```
 
-## Learn More
+### **4️⃣ Run the Development Server**
+```sh
+npm run dev
+```
+- The app will be available at `http://localhost:3000`
 
-To learn more about Next.js, take a look at the following resources:
+### **5️⃣ Build for Production**
+```sh
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **6️⃣ Deploy to Vercel**
+```sh
+vercel --prod
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design Decisions
+### **1️⃣ Next.js for Performance & SEO**
+- Uses **App Router** for server-side rendering and dynamic routing.
+- Optimized for fast loading times.
 
-## Deploy on Vercel
+### **2️⃣ Redux for State Management**
+- Stores weather and crypto data efficiently.
+- Enables **real-time updates** via WebSockets.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **3️⃣ Tailwind CSS for UI**
+- Faster styling with utility classes.
+- Fully **responsive** for all devices.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> dc3b1e5 (Initial commit from Create Next App)
+### **4️⃣ WebSockets for Live Data**
+- Provides **real-time price and weather updates** without refreshing the page.
+
+## 📌 Future Improvements
+- 🌍 **Multi-language support**
+- 📈 **More chart visualizations** for data analysis
+- 🔔 **User-customized alerts** based on preferences
+
+## 📜 License
+This project is open-source under the [MIT License](LICENSE).
+
+---
+Made with ❤️ by Anjali Kumari 🚀
+
